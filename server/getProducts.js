@@ -11,7 +11,7 @@ const products = require('../products.json')
 // }
 
 const getProducts = (req, res) => {
-    const price = req.query
+    const { price } = req.query
 
     if (price) {
         const items = products.filter(e => e.price <= parseInt(price))
